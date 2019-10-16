@@ -2,8 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-var exec = require('cordova/exec');
-
-exports.getInfo = function(callback) {
-  exec(callback, callback, 'ChromeSystemCpu', 'getInfo', []);
+module.exports = {
+  getInfo: function (successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, 'ChromeSystemCpu', 'getInfo', []);
+  }
 };
